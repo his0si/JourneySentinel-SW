@@ -4,23 +4,29 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(data => {
             const detectionList = document.getElementById('detection-list');
 
-            // 가져온 데이터를 화면에 표시
+            // Clear existing content
+            detectionList.innerHTML = '';
+
+            // Display fetched data
             data.forEach(item => {
                 const detectionItem = document.createElement('div');
                 detectionItem.classList.add('detection-item');
 
-                const message = document.createElement('p');
-                message.classList.add('message');
-                message.textContent = `메시지: ${item.message}`;
-
+                // Timestamp
                 const timestamp = document.createElement('p');
                 timestamp.classList.add('timestamp');
-                timestamp.textContent = `시간: ${item.timestamp}`;
+                timestamp.textContent = item.timestamp;
 
-                detectionItem.appendChild(message);
+                // Location
+                const location = document.createElement('p');
+                location.classList.add('location');
+                location.textContent = item.location;
+
+                // Append timestamp and location
                 detectionItem.appendChild(timestamp);
+                detectionItem.appendChild(location);
                 detectionList.appendChild(detectionItem);
             });
         })
-        .catch(error => console.error('데이터 가져오기 오류:', error));
+        .catch(error => console.error('Error fetching data:', error));
 });
