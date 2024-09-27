@@ -15,12 +15,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Timestamp
                 const timestamp = document.createElement('p');
                 timestamp.classList.add('timestamp');
-                timestamp.textContent = item.timestamp;
+                timestamp.textContent = `시간: ${item.timestamp}`;
 
                 // Location
                 const location = document.createElement('p');
                 location.classList.add('location');
-                location.textContent = item.location;
+                location.textContent = `장소: ${item.location}`;
 
                 // Append timestamp and location
                 detectionItem.appendChild(timestamp);

@@ -28,12 +28,31 @@ body {
     box-sizing: border-box;  /* Ensures padding is included in height/width */
 }
 
-
 h1 {
     font-size: 20px;
     color: #ffffff;
     text-align: center;
     margin-bottom: 20px;
+}
+
+/* Warning Box Styling */
+.warning-box {
+    background-color: #cccccc;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.warning-box a {
+    color: #004080;
+    text-decoration: none;
+}
+
+.warning-box a:hover {
+    text-decoration: underline;
 }
 
 .detection-list {
