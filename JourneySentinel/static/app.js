@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     // 데이터를 Flask 서버로 보내기 위한 예시 함수
     function sendWarningData(message, timestamp) {
-        fetch('/warning', {
+        fetch('http://10.73.1.126:5000/warning', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',

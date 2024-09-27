@@ -4,17 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>도난 시도 감지</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    <script src="{{ url_for('static', filename='app.js') }}" defer></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>도난 시도 감지</h1>
-        </header>
-            <div id="detection-list">
-                <!-- 도난 시도 데이터가 여기에 표시됨 -->
-            </div>
+        <h1>도난 시도 감지</h1>
+        <div id="warning-container">
+            <h2>최근 경고</h2>
+            <div id="latest-warning">아직 경고가 없습니다.</div>
         </div>
+        <div id="warning-list">
+            <h2>경고 목록</h2>
+            <ul id="warnings"></ul>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
 </body>
 </html>
