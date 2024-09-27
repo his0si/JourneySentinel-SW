@@ -4,10 +4,14 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: "font";
+    src: url(./fonts/font.ttf);
+}
+
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #ffffff;  /* Set background to white */
-    display: flex;
+    font-family: 'font';
+    background-color: #ffffff;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -17,10 +21,13 @@ body {
     background-color: #234032;  /* Green container */
     width: 100%;
     max-width: 375px; /* Matches the mobile phone size */
+    height: 812px;  /* Typical height for an iPhone mini */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Slight shadow for elevation */
+    box-sizing: border-box;  /* Ensures padding is included in height/width */
 }
+
 
 h1 {
     color: #ffffff;
