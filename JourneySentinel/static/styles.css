@@ -31,8 +31,9 @@ body {
 
 h1 {
     color: #ffffff;
+    font-size: 20px;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom:20px;
 }
 
 .detection-list {
