@@ -1,9 +1,14 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 
 app = Flask(__name__)
 
 # 도난 시도 데이터 저장 (메모리 내 리스트에 저장)
 detection_data = []
+
+# index.html 렌더링을 위한 경로 설정
+@app.route('/')
+def index():
+    return render_template('index.html')
 
 @app.route('/warning', methods=['POST'])  # POST 방식으로 /warning 경로 설정
 def warning():
@@ -24,4 +29,4 @@ def get_theft_detection_data():
     return jsonify(detection_data)
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)  # 로컬 네트워크에서 서버 실행
+    app.run(host='0.0.0.0')  # 로컬 네트워크에서 서버 실행
