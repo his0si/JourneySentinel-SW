@@ -2,15 +2,6 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
-@app.route('/get-theft-detection-data', methods=['GET'])
-def get_theft_detection_data():
-    # Dummy data for now
-    data = [
-        {'date': '2024-09-27', 'location': 'Bag pocket'}
-    ]
-    return jsonify(data), 200
-
-
 @app.route('/warning', methods=['POST'])  # POST 방식으로 /warning 경로 설정
 def warning():
     message = request.form.get('message')  # ESP32에서 전송하는 message 값
