@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const warningBox = document.getElementById('warning'); // 경고 박스 요소 추가
 
     fetch('/get-theft-detection-data')
         .then(response => response.json())
@@ -29,16 +28,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 detectionItem.appendChild(location);
                 detectionList.appendChild(detectionItem);
             });
-
-            // 경고 박스 표시
-            if (data.length === 0) {
-                warningBox.style.display = 'block'; // 데이터가 없을 때 경고 박스 표시
-            } else {
-                warningBox.style.display = 'none'; // 데이터가 있을 때 경고 박스 숨김
-            }
         })
         .catch(error => {
             console.error('Error fetching data:', error);
-            warningBox.style.display = 'block'; // 오류 발생 시 경고 박스 표시
         });
 });
