@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
+
 @app.route('/warning', methods=['POST'])  # POST 방식으로 /warning 경로 설정
 def warning():
     message = request.form.get('message')  # ESP32에서 전송하는 message 값
