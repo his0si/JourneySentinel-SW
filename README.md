@@ -1,4 +1,8 @@
 # JourneySentinel-SW
+
+이지랩 메이커톤 유연한 사고팀
+
+
 임베디드 IoT 기술을 활용한 해외여행 도난 범죄 방지 장치
 
 https://github.com/user-attachments/assets/1790ec27-287a-451c-b3b2-8668028dee13
